@@ -1,0 +1,19 @@
+ACCESS_TOKEN_VALIDITY_MILLISECONDS: 6000000 #x mili secs for theexpiring time for token
+SIGNING_KEY: "ojid46FKJf55JFPw556wWkoeijhedTjid7D555D"
+TOKEN_PREFIX: "Bearer "
+HEADER_STRING: "Authorization"
+
+server:
+  port: 8080
+  contextPath: /BikeRental
+
+datasource:
+    url: jdbc:h2:~/BikeRental;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false
+    driverClassName: org.h2.Driver
+    maxPoolSize: 10
+    hibernate:
+      hbm2ddl.method: create-drop
+      show_sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.H2Dialect
+
